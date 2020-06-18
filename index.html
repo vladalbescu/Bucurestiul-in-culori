@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title>Bucureștiul în culori</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&family=Suez+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""
+    />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+  </head>
+  <body>
+    <header id="header" class="header">
+      <a href="./index.html">
+        <h1 class="header__title">Bucureștiul în culori</h1></a
+      >
+      <p>
+        Bucureștiul, asemenea multor orașe din România, este văzut ca un oraș
+        predominant gri și mohorât. De aceea, am hotărât să-l colorăm noi în
+        viile culori ale curcubeului.
+      </p>
+    </header>
+    <main>
+      <section id="map" class="map"></section>
+      <section class="about">
+        <div class="profile">
+          <h1 class="heading-1">Despre mine</h1>
+          <div class="profile__container">
+            <div class="profile__top">
+              <div class="profile__photo">
+                <img src="./img/profile.jpg" alt="Profile photo" />
+              </div>
+              <div class="profile__content">
+                <div class="profile__name">
+                  Vlad-Andrei Albescu
+                </div>
+                <div class="profile__info">
+                  <div class="profile__age">
+                    <svg class="profile__icon">
+                      <use xlink:href="./img/sprite.svg#icon-profile"></use>
+                    </svg>
+                    <p>
+                      25 de ani
+                    </p>
+                  </div>
+                  <div class="profile__mail">
+                    <svg class="profile__icon">
+                      <use xlink:href="./img/sprite.svg#icon-envelop"></use>
+                    </svg>
+                    <p>vladalbescu@gmail.com</p>
+                  </div>
+                  <div class="profile__phone">
+                    <svg class="profile__icon">
+                      <use xlink:href="./img/sprite.svg#icon-phone"></use>
+                    </svg>
+                    <p>(+40)737523598</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="profile__about">
+              <p>
+                Sunt auto-didact și am învățat foarte multe de unul singur,
+                începând de la limbaje de programare până la cum să cânt la
+                chitară, îmi place să învăț teoria prin practică, sunt creativ
+                (prima mea pasiune a fost desenul și multă vreme am vrut să
+                devin arhitect) și, pe lângă programare, îmi place foarte mult
+                și graphic design-ul.
+              </p>
+              <p>
+                Am terminat Facultatea de Automatică și Calculatoare și, convins
+                că vreau să lucrez în industria jocurilor video, am început
+                masterul de Grafică, multimedia și realitate virtuală, dar mi-am
+                dat seama că nu este ceea ce îmi place. După ceva căutări,
+                încercări și self-study, am ajuns la concluzia că vreau să
+                lucrez în web development și, de câteva luni, am început să
+                învăț frontend development.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script
+      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""
+    ></script>
+    <script src="./js/coordinates.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

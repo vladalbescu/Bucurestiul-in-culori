@@ -1,0 +1,275 @@
+:root {
+  --azure: #0088ff;
+  --chrome-yellow: #ffaa00;
+  --safety-orange: #ff7700;
+  --carmine-red: #ff0033;
+  --violet: #9911aa;
+  --vivid-lime-green: #aadd22;
+  --dark-grey: rgb(40, 40, 40);
+  --light-grey: rgba(230, 230, 230);
+  --transparent-black: rgba(0, 0, 0, 0.2);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  color: var(--dark-grey);
+
+  overflow-x: hidden;
+}
+
+/******* HEADER *******/
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 20rem;
+  z-index: 1000;
+
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background-color: white;
+
+  transition: all 0.2s;
+}
+
+.header__title {
+  position: relative;
+  margin-bottom: 1rem;
+  padding: 0;
+  font-family: "Suez One", serif;
+  font-weight: 400;
+  font-size: 5rem;
+  line-height: 5rem;
+
+  background: linear-gradient(
+    124deg,
+    var(--azure),
+    var(--chrome-yellow),
+    var(--safety-orange),
+    var(--carmine-red),
+    var(--violet),
+    var(--vivid-lime-green)
+  );
+  background-size: 1800% 1800%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  animation: rainbow 15s ease infinite;
+}
+
+.header--scrolled.header {
+  height: 5rem;
+  padding-top: 1.3rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--transparent-black);
+}
+
+.header--scrolled p {
+  display: none;
+}
+
+.header--scrolled .header__title {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+/******* MAP *******/
+
+.map {
+  position: relative;
+  width: 100vw;
+  height: 50vh;
+  margin-top: 20rem;
+  border-top: 1px solid var(--transparent-black);
+  border-bottom: 1px solid var(--transparent-black);
+}
+
+.map:focus {
+  border-top: 3px solid var(--transparent-black);
+  border-bottom: 3px solid var(--transparent-black);
+}
+
+/******* ABOUT *******/
+
+.about {
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+  background-color: var(--light-grey);
+}
+
+.profile {
+  background-color: white;
+
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 1px 1px 6px var(--transparent-black);
+}
+
+.profile__container {
+  padding: 2.5rem;
+}
+
+.profile__content {
+  padding: 1rem 2rem 3rem 2rem;
+}
+
+.profile__top {
+  display: flex;
+  margin-bottom: 1rem;
+  border-radius: 3px;
+}
+
+.profile__info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.5rem;
+}
+
+.profile__mail,
+.profile__age,
+.profile__phone {
+  padding: 3px 0;
+  display: flex;
+  align-items: center;
+}
+
+.profile__mail p,
+.profile__age p,
+.profile__phone p {
+  margin-left: 1.5rem;
+}
+
+.profile__name {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+  margin-left: 1.5rem;
+}
+
+.profile__photo img {
+  height: 100%;
+  width: 9rem;
+  border-radius: 3px;
+  object-fit: cover;
+}
+
+.profile__icon {
+  display: inline-block;
+  fill: var(--dark-grey);
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+.profile__about p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+/******* TYPOGRAPHY *******/
+
+.heading-1 {
+  color: white;
+  font-family: "Suez One", serif;
+  font-weight: 300;
+  padding: 10px 20px;
+  text-shadow: 1px 1px 3px var(--transparent-black);
+
+  background-color: var(--chrome-yellow);
+}
+
+/******* ANIMATIONS *******/
+
+@keyframes rainbow {
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
+}
+
+/******* MEDIA QUERIES *******/
+
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 75%;
+  }
+
+  .header,
+  .about {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+
+  .map {
+    margin-top: 25rem;
+  }
+
+  .about {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  .profile__top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile__content {
+    padding-bottom: 1rem;
+  }
+
+  .profile__name,
+  .profile__info {
+    margin-left: 0;
+  }
+
+  .profile__photo img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header__title {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+}
